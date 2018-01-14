@@ -1,0 +1,43 @@
+@startuml Homework05ClassDiagram
+
+interface IBank {
+    +VerifyCardNumber()
+}
+
+interface IBankFactory{
+    +VerifyCreditCard()
+}
+
+class CathayBankFactory{
+    +VerifyCreditCard()
+}
+
+class CtbcBankFactory{
+    +VerifyCreditCard()
+}
+
+class NcccFactory{
+    +VerifyCreditCard()
+}
+
+class CathayBank{
+    +VerifyCardNumber()
+}
+
+class CtbcBank{
+    +VerifyCardNumber()
+}
+
+class Nccc{
+    +VerifyCardNumber()
+}
+
+IBankFactory <|.. CathayBankFactory
+IBankFactory <|.. CtbcBankFactory
+IBankFactory <|.. NcccFactory
+IBankFactory ..> IBank
+IBank <|.. CathayBank
+IBank <|.. CtbcBank
+IBank <|.. Nccc
+
+@enduml
