@@ -1,0 +1,44 @@
+@startuml Homework04ClassDiagram
+
+class Program{
+    -Main()
+}
+
+class Director {
+    +Construct()
+}
+
+abstract class Builder {
+    #product
+    +AddRam()
+    +AddCpu()
+    +AddHd()
+    +AddGraphicsCard()
+    +GetComputer()
+}
+
+class HpComputerBuilder{
+    +HpComputerBuilder()
+    +GetComputer()
+    -AddMb()
+}
+
+class AsusComputerBuilder{
+    +AsusComputerBuilder()
+    +GetComputer()
+    -AddMb()
+}
+
+class Computer{
+    -computerParts
+    +Add()
+    +Show()
+}
+
+Program --> Director
+Director o-- Builder 
+Builder <|-- HpComputerBuilder
+Builder <|-- AsusComputerBuilder
+HpComputerBuilder ..> Computer
+AsusComputerBuilder ..> Computer
+@enduml
