@@ -8,3 +8,4 @@ BuilderPattern/Settings.StyleCop
 BuilderPattern/StyleCop.Cache
 BuilderPattern/bin/Release/BuilderPattern.exe.config
 BuilderPattern/bin/Release/BuilderPattern.pdb
+FactoryMethod/StyleCop.Cache
