@@ -1,0 +1,149 @@
+@startuml Homework06ClassDiagram
+
+package Abstract{
+    abstract class AbstractCosplayClothingFactory {
+        + ProduceHat()
+        + ProduceHelmet()
+        + ProduceArmor()
+        + ProduceBoots()
+        + ProduceWeapon()
+    }
+
+    abstract class AbstractArmor {
+        # RoleName
+        + AbstractArmor()
+        + ProduceArmorOfRole()
+    }
+
+    abstract class AbstractBoots {
+        # RoleName
+        + AbstractBoots()
+        + ProduceBootsOfRole()
+    }
+
+    abstract class AbstractHat {
+        # RoleName
+        + AbstractHat()
+        + ProduceHatOfRole()
+    }
+
+    abstract class AbstractHelmet {
+        # RoleName
+        + AbstractHelmet()
+        + ProduceHelmetOfRole()
+    }
+
+    abstract class AbstractWeapon {
+        # RoleName
+        + AbstractWeapon()
+        + ProduceWeaponOfRole()
+    }
+}
+package Pokemon{
+    class PokemonCosplayClothingFactory {
+        # RoleName
+        + PokemonCosplayClothingFactory()
+        + ProduceHat()
+        + ProduceHelmet()
+        + ProduceArmor()
+        + ProduceBoots()
+        + ProduceWeapon()
+    }
+
+    class PokemonArmor {
+        
+    }
+
+    class PokemonBoots {
+        
+    }
+
+    class PokemonHat {
+        
+    }
+
+    class PokemonHelmet {
+        
+    }
+
+    class PokemonWeapon {
+        
+    }
+}
+
+package Warcraft{
+    class WarcraftCosplayClothingFactory {
+        # RoleName
+        + WarcraftCosplayClothingFactory()
+        + ProduceHat()
+        + ProduceHelmet()
+        + ProduceArmor()
+        + ProduceBoots()
+        + ProduceWeapon()
+    }
+
+    class WarcraftArmor {
+        
+    }
+
+    class WarcraftBoots {
+        
+    }
+
+    class WarcraftHat {
+        
+    }
+
+    class WarcraftHelmet {
+        
+    }
+
+    class WarcraftWeapon {
+        
+    }
+}
+
+class CosplayClothingStore {
+    - Hat
+    - Helmet
+    - Armor
+    - Boots
+    - Weapon
+    + CosplayClothingStore()
+    + OutputClothingOfRole()
+}
+
+AbstractCosplayClothingFactory <|-- PokemonCosplayClothingFactory
+AbstractCosplayClothingFactory <|-- WarcraftCosplayClothingFactory
+
+AbstractArmor <|-- PokemonArmor
+AbstractBoots <|-- PokemonBoots
+AbstractHat <|-- PokemonHat
+AbstractHelmet <|-- PokemonHelmet
+AbstractWeapon <|-- PokemonWeapon
+
+AbstractArmor <|-- WarcraftArmor
+AbstractBoots <|-- WarcraftBoots
+AbstractHat <|-- WarcraftHat
+AbstractHelmet <|-- WarcraftHelmet
+AbstractWeapon <|-- WarcraftWeapon
+
+PokemonCosplayClothingFactory --> PokemonArmor
+PokemonCosplayClothingFactory --> PokemonBoots
+PokemonCosplayClothingFactory --> PokemonHat
+PokemonCosplayClothingFactory --> PokemonHelmet
+PokemonCosplayClothingFactory --> PokemonWeapon
+
+WarcraftCosplayClothingFactory --> WarcraftArmor
+WarcraftCosplayClothingFactory --> WarcraftBoots
+WarcraftCosplayClothingFactory --> WarcraftHat
+WarcraftCosplayClothingFactory --> WarcraftHelmet
+WarcraftCosplayClothingFactory --> WarcraftWeapon
+
+CosplayClothingStore ..> AbstractCosplayClothingFactory
+CosplayClothingStore --> AbstractArmor
+CosplayClothingStore --> AbstractBoots
+CosplayClothingStore --> AbstractHat
+CosplayClothingStore --> AbstractHelmet
+CosplayClothingStore --> AbstractWeapon
+@enduml
