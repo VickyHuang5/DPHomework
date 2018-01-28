@@ -1,0 +1,31 @@
+@startuml Homework07ClassDiagram
+
+class Order {
+    # OrderId
+    # OriginalPrice
+    + Order()
+    + CalculateDiscount()
+}
+
+interface IDiscount{
+    + SetCondition()
+    + CalculateDiscountAmount()
+}
+
+class FullDiscount{
+    - fullAmount
+    + SetCondition()
+    + CalculateDiscountAmount()
+}
+
+class DiscountForAllItems{
+    - percentDiscount
+    + SetCondition()
+    + CalculateDiscountAmount()
+}
+
+IDiscount <|.. FullDiscount
+IDiscount <|.. DiscountForAllItems
+Order o--> IDiscount
+
+@enduml

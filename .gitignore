@@ -12,3 +12,6 @@ FactoryMethod/StyleCop.Cache
 AbstractFactory/StyleCop.Cache
 AbstractFactory/obj/
 AbstractFactory/bin/Debug/
+StrategyPattern/bin/Debug/
+StrategyPattern/obj/
+StrategyPattern/StyleCop.Cache
