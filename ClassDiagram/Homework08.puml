@@ -1,0 +1,43 @@
+@startuml Homework08ClassDiagram
+
+class PrintWord {
+    - Implementor
+    + Open()
+    + Print()
+    + Close()
+    + Show()
+}
+
+class PrintSpecifiedTimes {
+    + PrintMultipleTimes()
+}
+
+class PrintRandomTimes {
+    + RandomPrint()
+}
+
+abstract class AbstractPrintImplementor {
+    {abstract} Print()
+    {abstract} Open()
+    {abstract} Close()
+}
+
+class PrintStringImplementor {
+    + Print()
+    + Open()
+    + Close()
+}
+
+class PrintFileImplementor {
+    + Print()
+    + Open()
+    + Close()
+}
+
+PrintWord o-right- AbstractPrintImplementor
+PrintWord <|-down- PrintSpecifiedTimes
+PrintWord <|-down- PrintRandomTimes
+AbstractPrintImplementor <|-down- PrintStringImplementor
+AbstractPrintImplementor <|-down- PrintFileImplementor
+
+@enduml

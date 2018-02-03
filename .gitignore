@@ -15,3 +15,6 @@ AbstractFactory/bin/Debug/
 StrategyPattern/bin/Debug/
 StrategyPattern/obj/
 StrategyPattern/StyleCop.Cache
+BridgePattern/bin/Debug/
+BridgePattern/obj/
+BridgePattern/StyleCop.Cache
