@@ -18,3 +18,6 @@ StrategyPattern/StyleCop.Cache
 BridgePattern/bin/Debug/
 BridgePattern/obj/
 BridgePattern/StyleCop.Cache
+CompositePattern/StyleCop.Cache
+CompositePattern/bin/
+CompositePattern/obj/
